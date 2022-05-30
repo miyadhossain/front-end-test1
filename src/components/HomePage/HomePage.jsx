@@ -1,18 +1,27 @@
 import React from "react";
+import AvailableHomeSection from "../HomeComponets/AvailableHomeSection";
+import Carousel from "../HomeComponets/Carousel";
 import Header from "../HomeComponets/Header";
+import HomeTitleContainer from "../HomeComponets/HomeTitleContainer";
 import NavBar from "../HomeComponets/NavBar";
-import AppContainer from "../utilis/AppContainer";
+import VersatitleAddComponent from "../HomeComponets/VersatitleAddComponent";
 
 const HomePage = () => {
   return (
-    <AppContainer>
+    <>
       <section>
         <NavBar />
         <div className="mt-10">
           <Header />
         </div>
+        <AvailableHomeSection />
+        <VersatitleAddComponent />
+        <div className="bg-violet my-20 min-h-[500px]">
+          <HomeTitleContainer />
+        </div>
+        <Carousel />
       </section>
-    </AppContainer>
+    </>
   );
 };
 

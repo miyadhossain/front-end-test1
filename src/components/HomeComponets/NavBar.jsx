@@ -1,4 +1,6 @@
 import React from "react";
+import Logo from "../../assets/logo.png";
+import AppContainer from "../utilis/AppContainer";
 
 const headersElements = [
   {
@@ -40,29 +42,33 @@ const headersElements = [
 
 const NavBar = () => {
   return (
-    <nav className="my-6">
-      {/* logo language section */}
-      <div className="flex justify-between">
-        <div className="text-3xl font-bold">LOGO</div>
-        <div className="flex items-center space-x-2">
-          <button className="text-xs text-green-400 font-bold">BN</button>{" "}
-          <span className="text-xs text-gray font-bold">/</span>{" "}
-          <button className="text-xs">EN</button>
+    <AppContainer>
+      <nav className="my-6">
+        {/* logo language section */}
+        <div className="flex justify-between">
+          <div>
+            <img className="w-32 h-20 object-cover" src={Logo} alt="logo" />
+          </div>
+          <div className="flex items-center space-x-2">
+            <button className="text-xs text-green-400 font-bold">BN</button>{" "}
+            <span className="text-xs text-gray font-bold">/</span>{" "}
+            <button className="text-xs">EN</button>
+          </div>
         </div>
-      </div>
-      <div className="flex items-center justify-between px-3 my-6">
-        <div className="flex items-center space-x-10">
-          {headersElements.map(({ id, element, color }) => (
-            <h
-              className={`text-base uppercase font-semibold ${color}`}
-              key={id}
-            >
-              {element}
-            </h>
-          ))}
+        <div className="flex items-center justify-between px-3 my-6">
+          <div className="flex items-center space-x-10">
+            {headersElements.map(({ id, element, color }) => (
+              <h
+                className={`text-base uppercase font-semibold ${color}`}
+                key={id}
+              >
+                {element}
+              </h>
+            ))}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </AppContainer>
   );
 };
 
