@@ -1,6 +1,7 @@
 import React from "react";
 import AvailableHomeSection from "../HomeComponets/AvailableHomeSection";
 import Carousel from "../HomeComponets/Carousel";
+import Footer from "../HomeComponets/Footer";
 import Header from "../HomeComponets/Header";
 import HomeTitleContainer from "../HomeComponets/HomeTitleContainer";
 import NavBar from "../HomeComponets/NavBar";
@@ -20,6 +21,7 @@ const HomePage = () => {
           <HomeTitleContainer />
         </div>
         <Carousel />
+        <Footer />
       </section>
     </>
   );

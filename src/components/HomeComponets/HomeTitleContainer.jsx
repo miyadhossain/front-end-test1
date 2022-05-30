@@ -40,7 +40,7 @@ const HomeTitleContainer = () => {
           {titleContes.map((item) => (
             <div
               key={item.id}
-              className={`${item.background} ${item.borderType} ${item.borderColor} ${item.contentsColor} flex justify-center items-center rounded-full w-[21rem] h-[21rem] shadow-2xl`}
+              className={`${item.background} ${item.borderType} ${item.borderColor} ${item.contentsColor} flex justify-center items-center rounded-full w-80 h-80 shadow-2xl`}
             >
               <div className="text-center space-y-10">
                 <h1 className="text-5xl font-bold">{item.contetn1}</h1>
