@@ -81,10 +81,9 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="bg-[#dad8d8] min-h-[400px]">
-      <div>
-        <h1 className="text-center text-4xl text-violet">Title 1</h1>
-      </div>
+    <div className="bg-[#dad8d8] min-h-[500px]">
+      <h1 className="text-center text-4xl text-violet pt-10">Title 1</h1>
+
       <AppContainer>
         <Slider
           dots={true}

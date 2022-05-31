@@ -17,7 +17,7 @@ const HomePage = () => {
         </div>
         <AvailableHomeSection />
         <VersatitleAddComponent />
-        <div className="bg-violet my-20 min-h-[500px]">
+        <div className="bg-violet my-20 min-h-[600px]">
           <HomeTitleContainer />
         </div>
         <Carousel />

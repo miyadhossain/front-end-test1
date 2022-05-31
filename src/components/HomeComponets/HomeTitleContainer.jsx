@@ -35,7 +35,7 @@ const HomeTitleContainer = () => {
   return (
     <>
       <AppContainer>
-        <h1 className="text-center text-white text-4xl">Title 1</h1>
+        <h1 className="text-center text-white text-4xl pt-10">Title 1</h1>
         <div className="flex justify-between mt-20">
           {titleContes.map((item) => (
             <div

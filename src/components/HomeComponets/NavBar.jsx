@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../assets/logo.png";
+import "../../styles/NavBar.css";
 import AppContainer from "../utilis/AppContainer";
 
 const headersElements = [
@@ -43,7 +44,7 @@ const headersElements = [
 const NavBar = () => {
   return (
     <AppContainer>
-      <nav className="my-6">
+      <nav className="mt-6">
         {/* logo language section */}
         <div className="flex justify-between">
           <div>
@@ -65,6 +66,18 @@ const NavBar = () => {
                 {element}
               </h>
             ))}
+          </div>
+          <div className="bg-[#FFFFFF] rounded-full px-8 py-2 nav_btn">
+            <div className="flex items-center space-x-8 P-2">
+              <div>
+                <button>LOGIN</button>
+              </div>
+              <div>
+                <button className="bg-[#ed6a49] text-white rounded-full px-8 py-2 shadow-2xl">
+                  SIGN UP
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
