@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 import "../../styles/NavBar.css";
 import AppContainer from "../utilis/AppContainer";
@@ -41,7 +41,19 @@ const headersElements = [
   },
 ];
 
+const btns = [
+  {
+    id: 1,
+    text: "BN",
+  },
+  {
+    id: 2,
+    text: "EN",
+  },
+];
+
 const NavBar = () => {
+  const [activeColor, setActiveColor] = useState(0);
   return (
     <AppContainer>
       <nav className="mt-6">
@@ -51,9 +63,20 @@ const NavBar = () => {
             <img className="w-32 h-20 object-cover" src={Logo} alt="logo" />
           </div>
           <div className="flex items-center space-x-2">
-            <button className="text-xs text-green-400 font-bold">BN</button>{" "}
+            {/* <button className="text-xs text-green-400 font-bold">BN</button>{" "}
             <span className="text-xs text-gray font-bold">/</span>{" "}
-            <button className="text-xs">EN</button>
+            <button className="text-xs">EN</button> */}
+            {btns.map((btn, index) => (
+              <button
+                onClick={() => setActiveColor(index)}
+                key={btn.id}
+                className={`font-bold ${
+                  index === activeColor ? "text-green-400" : "text-gray-400"
+                }`}
+              >
+                {btn.text}
+              </button>
+            ))}
           </div>
         </div>
         <div className="flex items-center justify-between px-3 my-6">
@@ -67,7 +90,7 @@ const NavBar = () => {
               </h>
             ))}
           </div>
-          <div className="bg-[#FFFFFF] rounded-full px-8 py-2 nav_btn">
+          <div className="bg-[#FFFFFF] rounded-full px-6 py-2 nav_btn">
             <div className="flex items-center space-x-8 P-2">
               <div>
                 <button>LOGIN</button>
